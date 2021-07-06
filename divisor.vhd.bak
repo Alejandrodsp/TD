@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity divisor is
+port(
+  a : in std_logic_vector(3 downto 0);  
+  b :  in std_logic_vector(3 downto 0);  
+  saida  : out std_logic_vector(3 downto 0);   
+  overflow:  out std_logic   
+);
+end divisor;
+ 
+architecture arq_divisor of divisor is
+begin  
+
+ 
+ 
+end arq_divisor;

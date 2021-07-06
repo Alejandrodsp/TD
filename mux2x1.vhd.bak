@@ -1,0 +1,19 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY mux2x1 IS
+	PORT (
+		entrada: in std_logic_vector(1 downto 0);
+		seletor: in std_logic;
+		saida: out std_logic
+	);
+END mux2x1;
+
+architecture arq_mux2x1 of mux2x1 is
+begin
+
+saida <= (
+	( entrada(0) and seletor) or ( entrada(1) and not seletor)
+	);
+
+end arq_mux2x1;

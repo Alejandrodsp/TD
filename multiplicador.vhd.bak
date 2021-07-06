@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity multiplicador is
+port(
+  a : in std_logic_vector(3 downto 0);  
+  b :  in std_logic_vector(3 downto 0);  
+  saida  : out std_logic_vector(3 downto 0);   
+  overflow:  out std_logic   
+);
+end multiplicador;
+ 
+architecture arq_multiplicador of multiplicador is
+begin  
+ with a select
+    saida <= "0000" when "0000",
+         "0010" when "0001",
+         "0100" when "0010",
+         "0110" when "0011",
+			"1000" when "0100",
+			"1010" when "0101",
+			"1100" when "0110",
+			"1110" when "0111",
+			" when "1000",
+			A(3) when "0011",
+			A(3) when "0011",
+			A(3) when "0011",
+			A(3) when "0011",
+			A(3) when "0011",
+			A(3) when "0011",
+         '0'  when others;
+ 
+ 
+end arq_multiplicador;
